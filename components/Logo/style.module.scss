@@ -1,0 +1,17 @@
+@import "styles/utils";
+
+.link {
+  display: flex;
+
+  h1 {
+    display: flex;
+  }
+
+  img {
+    width: 82px;
+
+    @include media(">desktop") {
+      width: 101px;
+    }
+  }
+}
