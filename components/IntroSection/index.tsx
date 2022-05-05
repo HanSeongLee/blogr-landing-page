@@ -14,7 +14,7 @@ const IntroSection: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...
                     Designed for the future
                 </h2>
                 <img className={styles.image}
-                     src={'/img/illustration-editor-mobile-1.svg'}
+                     src={'/img/illustration-editor-mobile.svg'}
                      alt={''}
                 />
                 <div className={styles.featureContainer}>
