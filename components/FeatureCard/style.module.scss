@@ -1,0 +1,22 @@
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 16px;
+  text-align: center;
+
+  .title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    color: #1F3E5A;
+  }
+
+  .description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.5px;
+    color: #4C5862;
+  }
+}
