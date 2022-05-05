@@ -1,0 +1,42 @@
+
+.footer {
+  text-align: center;
+  background: #24242C;
+  border-radius: 0px 100px 0px 0px;
+  padding: 75px 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 72px;
+  }
+
+  .logo {
+    img {
+      width: 101px;
+    }
+  }
+
+  .sitemapContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 40px;
+  }
+
+  .title {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 33px;
+    color: #FFFFFF;
+  }
+
+  .linkContainer {
+    font-family: 'Ubuntu';
+    font-size: 18px;
+    line-height: 33px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 21px;
+  }
+}
