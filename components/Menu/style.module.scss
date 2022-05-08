@@ -1,9 +1,19 @@
+@import "styles/utils";
 
 .nav {
+  @include media(">desktop") {
+    width: 100%;
+    padding-left: 64px;
+  }
+
   .menuButton {
     background: transparent;
     border: none;
     cursor: pointer;
+
+    @include media(">desktop") {
+      display: none;
+    }
   }
 
   .menuWrapper {
@@ -14,6 +24,15 @@
     overflow: hidden;
     max-height: 0;
     transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+
+    @include media(">desktop") {
+      position: relative;
+      top: initial;
+      left: initial;
+      overflow: initial;
+      max-height: initial;
+      transition: initial;
+    }
 
     &.open {
       max-height: 9999px;
@@ -30,11 +49,25 @@
     padding: 24px 24px 32px;
     margin: 0 27px 0 24px;
 
+    @include media(">desktop") {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background: transparent;
+      box-shadow: initial;
+      padding: 0;
+      margin: 0;
+    }
+
     .sitemapContainer {
       display: flex;
       flex-direction: column;
       grid-gap: 24px;
       text-align: center;
+
+      @include media(">desktop") {
+        flex-direction: row;
+      }
     }
 
     hr {
@@ -42,6 +75,10 @@
       background: #E8E4E4;
       border: none;
       margin: 24px 0;
+
+      @include media(">desktop") {
+        display: none;
+      }
     }
 
     .buttonContainer {
@@ -50,6 +87,11 @@
       align-items: center;
       justify-content: center;
       grid-gap: 24px;
+
+      @include media(">desktop") {
+        flex-direction: row;
+        grid-gap: 32px;
+      }
     }
 
     .loginButton {
@@ -57,6 +99,15 @@
       font-size: 18px;
       line-height: 28px;
       color: #1F3E5A;
+
+      @include media(">desktop") {
+        font-family: "Ubuntu";
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FFFFFF;
+        opacity: 0.75;
+      }
     }
 
     .signupButton {
@@ -72,6 +123,18 @@
       color: #FFFFFF;
       background: linear-gradient(135deg, #FF8F71 0%, #FF3E55 100%);
       border-radius: 28px;
+
+      @include media(">desktop") {
+        font-weight: 700;
+        color: #FF505C;
+        background: #FFFFFF;
+        transition: color 0.3s, background 0.3s;
+
+        &:hover {
+          color: #FFFFFF;
+          background: #FF7B86;
+        }
+      }
     }
   }
 }
