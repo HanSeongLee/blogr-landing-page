@@ -13,10 +13,20 @@ const IntroSection: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...
                 <h2 className={styles.title}>
                     Designed for the future
                 </h2>
-                <img className={styles.image}
-                     src={'/img/illustration-editor-mobile.svg'}
-                     alt={''}
-                />
+            </Container>
+            <Container className={styles.container}>
+                <div className={styles.imageWrapper}>
+                    <picture>
+                        <source srcSet={'/img/illustration-editor-mobile.svg'}
+                                media={'(max-width: 767px)'}
+                        />
+
+                        <img className={styles.image}
+                             src={'/img/illustration-editor-desktop.svg'}
+                             alt={''}
+                        />
+                    </picture>
+                </div>
                 <div className={styles.featureContainer}>
                     <FeatureCard title={'Introducing an extensible editor'}
                                  description={'Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog.'}
