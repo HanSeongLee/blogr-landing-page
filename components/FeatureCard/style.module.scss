@@ -1,15 +1,19 @@
+@import "styles/utils";
 
 .featureCard {
   display: flex;
   flex-direction: column;
   grid-gap: 16px;
-  text-align: center;
 
   .title {
     font-weight: 600;
     font-size: 28px;
     line-height: 32px;
     color: #1F3E5A;
+
+    @include media(">desktop") {
+      line-height: 28px;
+    }
   }
 
   .description {
