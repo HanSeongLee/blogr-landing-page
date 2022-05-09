@@ -1,38 +1,81 @@
+@import "styles/utils";
 
 .bannerSection {
   position: relative;
   text-align: center;
-  padding-top: 172px;
+  background: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
+  border-radius: 0px 100px;
+  padding: 221px 24px 109px;
+  margin-top: 172px;
+
+  @include media(">desktop") {
+    text-align: left;
+    padding: 111px 0;
+    margin-top: 0;
+  }
+
+  .circleWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 100px;
+    overflow: hidden;
+
+    .circleImage {
+      position: relative;
+      top: -205px;
+      left: 50%;
+      width: 602px;
+      transform: translateX(-50%);
+
+      @include media(">desktop") {
+        top: -509px;
+        left: -213px;
+        width: 1014px;
+        transform: initial;
+      }
+    }
+  }
 
   .container {
     position: relative;
-    background: linear-gradient(135deg, #2D2E40 0%, #3F4164 100%);
-    border-radius: 0px 100px;
-    padding: 221px 24px 109px;
-    overflow: hidden;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("/img/bg-pattern-circles.svg") no-repeat 50% -240px;
-      background-size: 602px;
-      content: "";
+    @include media(">desktop") {
+      display: flex;
+      align-items: center;
+      grid-gap: 98px;
     }
   }
 
   .imageWrapper {
     position: absolute;
-    top: 0;
+    top: calc(-172px - 221px);
     left: 0;
     width: 100%;
-    z-index: 1;
+
+    @include media(">desktop") {
+      position: relative;
+      top: initial;
+      left: initial;
+      width: 100%;
+      max-width: 472px;
+      height: 40px;
+    }
 
     .image {
       width: 100%;
       max-width: 328px;
+
+      @include media(">desktop") {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 472px;
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -41,6 +84,11 @@
     display: flex;
     flex-direction: column;
     grid-gap: 10px;
+
+    @include media(">desktop") {
+      grid-gap: 5px;
+      max-width: 540px;
+    }
 
     .title {
       font-weight: 600;
