@@ -47,7 +47,7 @@
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
     border-radius: 5px;
     padding: 24px 24px 32px;
-    margin: 0 27px 0 24px;
+    margin: 0 27px 100vh 24px;
 
     @include media(">desktop") {
       flex-direction: row;
