@@ -9,11 +9,19 @@ const FeatureSection: React.FC<HTMLAttributes<HTMLDivElement>> = ({ className, .
         <section className={cn(styles.featureSection, className)}
                  {...props}
         >
-            <Container>
-                <img className={styles.image}
-                     src={'/img/illustration-laptop-mobile-1.svg'}
-                     alt={''}
-                />
+            <Container className={styles.container}>
+                <div className={styles.imageWrapper}>
+                    <picture>
+                        <source srcSet={'/img/illustration-laptop-mobile.svg'}
+                                media={'(max-width: 767px)'}
+                        />
+
+                        <img className={styles.image}
+                             src={'/img/illustration-laptop-desktop.svg'}
+                             alt={''}
+                        />
+                    </picture>
+                </div>
                 <div className={styles.featureContainer}>
                     <FeatureCard title={'Free, open, simple'}
                                  description={'Blogr is a free and open source application backed by a large community of helpful developers. It supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.'}
