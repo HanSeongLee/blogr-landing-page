@@ -26,9 +26,12 @@
 
   .container {
     position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
+
+    @include media(">desktop") {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+    }
   }
 
   .imageWrapper {
