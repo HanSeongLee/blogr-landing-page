@@ -1,6 +1,7 @@
 import React, {useCallback, useState} from 'react';
 import styles from './style.module.scss';
 import cn from 'classnames';
+import IconArrow from '/public/icons/icon-arrow-light.svg';
 
 interface IProps {
     title: string;
@@ -14,7 +15,6 @@ const AccordionMenu: React.FC<IProps> = ({ title, items }) => {
         setOpen(!open);
     }, [open]);
 
-
     return (
         <div className={cn(styles.accordionMenu, {
             [styles.open]: open,
@@ -23,10 +23,7 @@ const AccordionMenu: React.FC<IProps> = ({ title, items }) => {
                 onClick={toggleMenu}
             >
                 {title}
-                <img className={styles.icon}
-                     src={'/icons/icon-arrow-dark.svg'}
-                     alt={''}
-                />
+                <IconArrow className={styles.icon} />
             </h2>
             <div className={styles.menuWrapper}>
                 <ul className={styles.menu}>
