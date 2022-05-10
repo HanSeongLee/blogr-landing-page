@@ -99,15 +99,15 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_382" result="shape"/>
 </filter>
 <linearGradient id="paint0_linear_0_382" x1="-94" y1="216.5" x2="237.012" y2="376.137" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF8F71"/>
+<stop stop-color="#FF8F71" offset="0%"/>
 <stop offset="1" stop-color="#FF3E55"/>
 </linearGradient>
 <linearGradient id="paint1_linear_0_382" x1="159" y1="279.5" x2="490.012" y2="439.137" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF8F71"/>
+<stop stop-color="#FF8F71" offset="0%"/>
 <stop offset="1" stop-color="#FF3E55"/>
 </linearGradient>
 <linearGradient id="paint2_linear_0_382" x1="173.333" y1="110.635" x2="222.655" y2="238.087" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF8F71"/>
+<stop stop-color="#FF8F71" offset="0%"/>
 <stop offset="1" stop-color="#FF3E55"/>
 </linearGradient>
 <clipPath id="clip0_0_382">
