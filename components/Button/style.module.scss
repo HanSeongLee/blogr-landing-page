@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .button {
   min-height: 48px;
@@ -17,11 +18,29 @@
   &.primary {
     color: #FF505C;
     background: #FFFFFF;
+
+    @include media(">desktop") {
+      transition: color 0.3s, background 0.3s;
+
+      &:hover {
+        color: #FFFFFF;
+        background: #FF7B86;
+      }
+    }
   }
 
   &.secondary {
     color: #FFFFFF;
     background: transparent;
     border: 1px solid #FFFFFF;
+
+    @include media(">desktop") {
+      transition: color 0.3s, background 0.3s;
+
+      &:hover {
+        color: #FF7B86;
+        background: #FFFFFF;
+      }
+    }
   }
 }
