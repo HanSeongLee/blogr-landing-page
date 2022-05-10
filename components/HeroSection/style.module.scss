@@ -29,6 +29,10 @@
     align-items: center;
     text-align: center;
     padding-top: 196px;
+
+    @include media(">desktop") {
+      padding-top: 226px;
+    }
   }
 
   .title {
