@@ -48,11 +48,13 @@
 
     @include media(">desktop") {
       position: absolute;
-      top: -225px;
+      top: 50%;
       right: -425px;
       max-width: 885px;
       width: 885px;
       margin-bottom: 0;
+
+      transform: translateY(-52%);
     }
   }
 

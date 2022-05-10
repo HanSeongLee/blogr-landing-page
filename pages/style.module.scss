@@ -11,6 +11,10 @@
 
   .introSection {
     margin-bottom: 100px;
+
+    @include media(">desktop") {
+      margin-bottom: 57px;
+    }
   }
 
   .bannerSection {
