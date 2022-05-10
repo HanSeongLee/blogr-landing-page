@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .footer {
   text-align: center;
@@ -5,11 +6,22 @@
   border-radius: 0px 100px 0px 0px;
   padding: 75px 0;
 
+  @include media(">desktop") {
+    text-align: left;
+    padding: 70px 0;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-gap: 72px;
+
+    @include media(">desktop") {
+      flex-direction: row;
+      align-items: flex-start;
+      grid-gap: 184px;
+    }
   }
 
   .logo {
@@ -22,6 +34,15 @@
     display: flex;
     flex-direction: column;
     grid-gap: 40px;
+
+    @include media(">desktop") {
+      width: 100%;
+      flex-direction: row;
+
+      li {
+        flex: 1;
+      }
+    }
   }
 
   .title {
@@ -30,6 +51,11 @@
     font-size: 18px;
     line-height: 33px;
     color: #FFFFFF;
+
+    @include media(">desktop") {
+      font-size: 15px;
+      line-height: 33px;
+    }
   }
 
   .linkContainer {
@@ -38,5 +64,18 @@
     line-height: 33px;
     color: rgba(255, 255, 255, 0.7);
     margin-top: 21px;
+
+    @include media(">desktop") {
+      font-size: 15px;
+      line-height: 33px;
+    }
+
+    a {
+      @include media(">desktop") {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
