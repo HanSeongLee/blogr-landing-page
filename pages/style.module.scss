@@ -1,0 +1,31 @@
+@import "styles/utils";
+
+.main {
+  .heroSection {
+    margin-bottom: 100px;
+
+    @include media(">desktop") {
+      margin-bottom: 150px;
+    }
+  }
+
+  .introSection {
+    margin-bottom: 100px;
+  }
+
+  .bannerSection {
+    margin-bottom: 79px;
+
+    @include media(">desktop") {
+      margin-bottom: 116px;
+    }
+  }
+
+  .featureSection {
+    margin-bottom: 100px;
+
+    @include media(">desktop") {
+      margin-bottom: 123px;
+    }
+  }
+}
